@@ -25,7 +25,7 @@ const commandFiles = fs.readdirSync('./commands/').filter(file => file.endsWith(
 
 const discord_buttons = require('discord-buttons');
 
-discord_buttons(client);
+discord_buttons(client); 
 
 const {MessageMenuOption, MessageMenu} = require("discord-buttons");
 
