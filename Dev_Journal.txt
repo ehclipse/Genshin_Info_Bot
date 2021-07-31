@@ -1,0 +1,59 @@
+Update 2 (5/30/2021 4:24 am)
+Finished the main menu and started Artifacts Menu
+Had problem with deleting reactions but realized needed "manage message" permissions for it to work.
+Will work on the Artifacts Menu later but have to figure out how to navigate through it. Using a variable to store the "position" user is at and an array with the artifacts name maybe (probably inefficient though) ? Add some user validation for onReactAdd too. Have <- and -> to navigate.
+Need to figure out how to access images through the api.
+
+Update 3 (5/30/2021 10:20 pm)
+api.genshin.dev/artifacts 
+Has an array of artifacts. So you can use that and a variable to navigate through it (probably)
+
+
+Update 4 (5/31/2021 3:50 am)
+I got the fetch to work. Apparently node doesn't support it so I had to install a node module for ti.
+I learned that you can do async/await in arrow functions. I got it to work to fetch the artifact names array from the api server. 
+Probably will work on navigation later today inside the .then(). To make a function wait until a promise is fulfilled you need to make it async function and have an await.
+I also learned vscode has 3 grey dots below the first character of the line to indicate if the thing you did had no effect on how the line worked (Ex. when putting await infront of the console.log()).
+
+
+Update 5 (5/31/2021 11:28 pm)
+Found out discord released "discord buttons" so probably will redo all the emojis turn them into buttons to make it easier
+
+Update 6 (6/1/2021 3:36 am)
+Changed all the emojis reactions to buttons now time to figure out how to fetch data from api while pausing the rest of the program so we can get the artifactNames. Buttons are a pain :( but 
+convenient
+
+
+Update 7 (6/1/2021 10:35 pm)
+Probably will change the program so it calls the artifactnames api everytime you click on next/prev (inefficient but will optimize it later such as creating a text file it can put the data in and 
+you can read it in as an array)
+
+
+Update 8 (6/2/2021 4:11 am)
+Finished the navigation (for now). Created a file to hold functions I create called ("apiFunctions.js" will need to change the name later). API is down :(
+I started working on the grabbing data from the api part and displaying it in an embed. Will need to create the embed. 
+
+Update 9 (6/2/2021 10:17 pm)
+Finished the grabbing data from api and putting it in embed. Now working on weapons menu embed. Was going to fetch the weapon name data form the start but it turned out the read from file is asynchronous
+which is annoying. Probably wll do this later....
+NOTE: The updateData and readData functions might become useless later.
+
+Might create a navigation state variable so it knows when the user clicks back it knows what embed to show 
+
+
+Update 10 (7/29/2021 3:22 am)
+Decided to remake everything with the new dropdown menu Discord introduced because it is more user friendly and easier to navigate.
+Next will be doing the select handler for the main menu and creating it for artifacts.
+
+Update 11 (7/30/2021 2:00 am)
+Finished the validation to see if person clicking the menu is the same person that called the bot in the first place. If not, then user will receive and error message prompting them to create another menu using '.genshin' command
+Next is to create the embeds and menus for artifacts.... etc.
+Note: If the user calls genshin command multiple times, not sure if it will update the user at that key or lose the message reference or something.
+
+
+Update 12 (7/31/2021 2:57 am)
+Finished the artifact and weapons menu options. Since maximum options is 25, might add more later, maybe a second page to the menu. Still working on characters, trying to find useful information for each.
+Will add images to embeds later. Still working on the images from the api for characters. Probably will ask the discord server if anyone knows how to grab it.
+
+Things to do:
+- Push project to github before removing onMessageReactions.
