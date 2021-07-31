@@ -142,7 +142,7 @@ client.on("clickMenu",  async (menu) => {
                 characterMenuSelect(menu, botUserMap[menu.clicker.user.id].mainMenuRef);
                 break;
 
-            
+             
         }
            
       
