@@ -2,9 +2,11 @@ const {MessageMenuOption, MessageMenu} = require("discord-buttons");
 const artifactMenuOptions = require('../menuOptions/artifactOptions');
 const weaponMenuOptions = require('../menuOptions/weaponOptions');
 const characterMenuOptions = require('../menuOptions/characterOptions');
+const elementMenuOptions = require('../menuOptions/elementOptions');
+const nationMenuOptions = require('../menuOptions/nationOptions');
 
-module.exports = (menu, botUserMap, artifact_embed, weapon_embed, character_embed) => {
-
+module.exports = (menu, botUserMap, artifact_embed, weapon_embed, character_embed, element_embed, nation_embed) => {
+    
     let artifactMenu = new MessageMenu()
             .setID("artifactMenu")
             .setMaxValues(1)
@@ -25,6 +27,20 @@ module.exports = (menu, botUserMap, artifact_embed, weapon_embed, character_embe
             .setMinValues(1)
             .setPlaceholder("Click me to make a Selection!")
             .addOptions(characterMenuOptions);
+
+    let elementMenu = new MessageMenu()
+            .setID("elementMenu")
+            .setMaxValues(1)
+            .setMinValues(1)
+            .setPlaceholder("Click me to make a Selection!")
+            .addOptions(elementMenuOptions);
+    
+    let nationMenu = new MessageMenu()
+            .setID("nationMenu")
+            .setMaxValues(1)
+            .setMinValues(1)
+            .setPlaceholder("Click me to make a Selection!")
+            .addOptions(nationMenuOptions);
 
     switch(menu.values[0]){
         case "artifacts":
@@ -48,10 +64,12 @@ module.exports = (menu, botUserMap, artifact_embed, weapon_embed, character_embe
             break;
         case "elements":
             console.log('elements');
+            botUserMap[menu.clicker.user.id].mainMenuRef.edit(element_embed, elementMenu);
+            botUserMap[menu.clicker.user.id].position = 'element';
             menu.reply.defer();
             break;
         case "enemies":
-            console.log('enemies');
+            console.log('enemies');    
             menu.reply.defer();
             break;
         case "materials":
@@ -60,6 +78,8 @@ module.exports = (menu, botUserMap, artifact_embed, weapon_embed, character_embe
             break;
         case "nations":
             console.log('nations');
+            botUserMap[menu.clicker.user.id].mainMenuRef.edit(nation_embed, nationMenu);
+            botUserMap[menu.clicker.user.id].position = 'nation';
             menu.reply.defer();
             break;
         case "weapons":

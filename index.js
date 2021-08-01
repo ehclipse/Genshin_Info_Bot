@@ -36,6 +36,8 @@ const mainMenuSelect = require('./menuHandler/mainMenuHandler');
 const artifactMenuSelect = require('./menuHandler/artifactMenuHandler');
 const weaponMenuSelect = require('./menuHandler/weaponMenuHandler');
 const characterMenuSelect = require('./menuHandler/characterMenuHandler');
+const elementMenuSelect = require('./menuHandler/elementMenuHandler');
+const nationMenuSelect = require('./menuHandler/nationMenuHandler');
 
 var mainMenuRef; // message reference to main menu
 
@@ -76,6 +78,20 @@ const artifact_embed = new Discord.MessageEmbed()
 const weapon_embed = new Discord.MessageEmbed()
 .setTitle('Weapons Menu')
 .setDescription('Select a weapon to view it\'s stats')
+.setColor('#ff00ff')
+.setFooter('Eula Bot','https://i.pinimg.com/236x/4e/f3/02/4ef3020c1dace7794f7dd96d04025b14.jpg')
+.setThumbnail('https://static.wikia.nocookie.net/gensin-impact/images/9/9f/Icon_Sands_of_Eon.png/revision/latest?cb=20210201215830');
+
+const element_embed = new Discord.MessageEmbed()
+.setTitle('Elements Menu')
+.setDescription('Select an element to view it\'s info')
+.setColor('#ff00ff')
+.setFooter('Eula Bot','https://i.pinimg.com/236x/4e/f3/02/4ef3020c1dace7794f7dd96d04025b14.jpg')
+.setThumbnail('https://static.wikia.nocookie.net/gensin-impact/images/9/9f/Icon_Sands_of_Eon.png/revision/latest?cb=20210201215830');
+
+const nation_embed = new Discord.MessageEmbed()
+.setTitle('Nations Menu')
+.setDescription('Select a nation to view it\'s info')
 .setColor('#ff00ff')
 .setFooter('Eula Bot','https://i.pinimg.com/236x/4e/f3/02/4ef3020c1dace7794f7dd96d04025b14.jpg')
 .setThumbnail('https://static.wikia.nocookie.net/gensin-impact/images/9/9f/Icon_Sands_of_Eon.png/revision/latest?cb=20210201215830');
@@ -131,17 +147,22 @@ client.on("clickMenu",  async (menu) => {
     {
         switch(botUserMap[menu.clicker.user.id].position){
             case 'main':
-                mainMenuSelect(menu, botUserMap, artifact_embed, weapon_embed, character_embed);
+                mainMenuSelect(menu, botUserMap, artifact_embed, weapon_embed, character_embed, element_embed, nation_embed);
                 break;
             case 'artifact':
                 artifactMenuSelect(menu, botUserMap[menu.clicker.user.id].mainMenuRef);
-                //console.log('artifact handler');
                 break;
             case 'weapon':
                 weaponMenuSelect(menu, botUserMap[menu.clicker.user.id].mainMenuRef);
                 break;
             case 'character':
                 characterMenuSelect(menu, botUserMap[menu.clicker.user.id].mainMenuRef);
+                break;
+            case 'element':
+                elementMenuSelect(menu, botUserMap[menu.clicker.user.id].mainMenuRef);
+                break;
+            case 'nation':
+                nationMenuSelect(menu, botUserMap[menu.clicker.user.id].mainMenuRef);
                 break;
 
              

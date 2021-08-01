@@ -13,7 +13,7 @@ module.exports = async (menu, msgRef) => {
     const weapon_embed = new Discord.MessageEmbed()
         .setColor('#ff00ff')
         .setFooter('Eula Bot','https://i.pinimg.com/236x/4e/f3/02/4ef3020c1dace7794f7dd96d04025b14.jpg')
-        .setThumbnail('https://i.pinimg.com/236x/4e/f3/02/4ef3020c1dace7794f7dd96d04025b14.jpg')
+        .setThumbnail(`${apiBaseURL}/weapons/${menu.values[0]}/icon`)
         .setTitle(`${weaponData.name}`)
         .addFields(
             {name: "Rarity", value: `${weaponData.rarity}`, inline: false}, 

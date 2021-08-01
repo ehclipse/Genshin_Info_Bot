@@ -55,5 +55,21 @@ Update 12 (7/31/2021 2:57 am)
 Finished the artifact and weapons menu options. Since maximum options is 25, might add more later, maybe a second page to the menu. Still working on characters, trying to find useful information for each.
 Will add images to embeds later. Still working on the images from the api for characters. Probably will ask the discord server if anyone knows how to grab it.
 
+Update 13 (8/1/2021 2:32 am)
+Finished the nation, element, mostly character (still need to work on organizing info for constellations. Probably use foreach loop like in the element's menu). 
+Found a way to get images to display on embed by just putting in the api endpoint url. Next work on organizing characters info.
+
 Things to do:
 - Push project to github before removing onMessageReactions.
+
+
+Menu Progress:
+- Artifacts -- 7/31/2021
+- characters -- WIP 8/1/2021 - present
+- consumables
+- domains
+- elements -- 8/1/2021
+- enemies
+- materials
+- nations -- 8/1/2021
+- weapons -- 7/31/2021
