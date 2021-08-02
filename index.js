@@ -62,7 +62,7 @@ const character_embed = new Discord.MessageEmbed()
 .setDescription('Select a character to view it\'s info')
 .setColor('#ff00ff')
 .setFooter('Eula Bot','https://i.pinimg.com/236x/4e/f3/02/4ef3020c1dace7794f7dd96d04025b14.jpg')
-.setThumbnail('https://static.wikia.nocookie.net/gensin-impact/images/9/9f/Icon_Sands_of_Eon.png/revision/latest?cb=20210201215830');
+.setThumbnail('https://static.wikia.nocookie.net/gensin-impact/images/4/4b/Raiden_Shogun_Cutscene.png/revision/latest/smart/width/250/height/250?cb=20210629034806');
 
 // Create Artifact Embed
 const artifact_embed = new Discord.MessageEmbed()
@@ -80,21 +80,21 @@ const weapon_embed = new Discord.MessageEmbed()
 .setDescription('Select a weapon to view it\'s stats')
 .setColor('#ff00ff')
 .setFooter('Eula Bot','https://i.pinimg.com/236x/4e/f3/02/4ef3020c1dace7794f7dd96d04025b14.jpg')
-.setThumbnail('https://static.wikia.nocookie.net/gensin-impact/images/9/9f/Icon_Sands_of_Eon.png/revision/latest?cb=20210201215830');
+.setThumbnail('https://static.wikia.nocookie.net/gensin-impact/images/8/81/Icon_Bow.png/revision/latest/top-crop/width/360/height/360?cb=20210413210801');
 
 const element_embed = new Discord.MessageEmbed()
 .setTitle('Elements Menu')
 .setDescription('Select an element to view it\'s info')
 .setColor('#ff00ff')
 .setFooter('Eula Bot','https://i.pinimg.com/236x/4e/f3/02/4ef3020c1dace7794f7dd96d04025b14.jpg')
-.setThumbnail('https://static.wikia.nocookie.net/gensin-impact/images/9/9f/Icon_Sands_of_Eon.png/revision/latest?cb=20210201215830');
+.setThumbnail('https://i.pinimg.com/736x/3b/0d/07/3b0d073db56d05d84ef6f2303e1f3586.jpg');
 
 const nation_embed = new Discord.MessageEmbed()
 .setTitle('Nations Menu')
 .setDescription('Select a nation to view it\'s info')
 .setColor('#ff00ff')
 .setFooter('Eula Bot','https://i.pinimg.com/236x/4e/f3/02/4ef3020c1dace7794f7dd96d04025b14.jpg')
-.setThumbnail('https://static.wikia.nocookie.net/gensin-impact/images/9/9f/Icon_Sands_of_Eon.png/revision/latest?cb=20210201215830');
+.setThumbnail('https://static.wikia.nocookie.net/gensin-impact/images/8/80/Emblem_Mondstadt.png/revision/latest?cb=20201116194623');
 
 
 //////////////////////////////////////////////////////////////////////////////////////////////////////////////////

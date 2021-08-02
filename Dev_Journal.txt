@@ -59,13 +59,17 @@ Update 13 (8/1/2021 2:32 am)
 Finished the nation, element, mostly character (still need to work on organizing info for constellations. Probably use foreach loop like in the element's menu). 
 Found a way to get images to display on embed by just putting in the api endpoint url. Next work on organizing characters info.
 
+Update 14 (8/2/2021 3:52 am)
+Finished the character pretty much. Just that the skill talent upgrades haven't been put into all the characters in the api yet, so I will ignore it since it seems less useful because the player 
+can look through the stats in-game rather than on the bot. The bot should just give an overview on the skills and talents. Next probably should be one of the other options on the main menu.
+
 Things to do:
 - Push project to github before removing onMessageReactions.
 
 
 Menu Progress:
 - Artifacts -- 7/31/2021
-- characters -- WIP 8/1/2021 - present
+- characters -- 8/1/2021 - 8/2/2021
 - consumables
 - domains
 - elements -- 8/1/2021

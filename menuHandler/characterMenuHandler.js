@@ -31,8 +31,37 @@ module.exports = async (menu, msgRef) => {
             {name: "Constellation", value: `${characterData['constellation']}`, inline: true},
             {name: "Birthday", value: `${characterData['birthday']}`, inline: true},
 
+        );
+    
+    /* Because of Hu-Tao not having enough detail with upgrades.
+    // for each skill talents in the character, add fields for it
+    const upgradesSkillTalents = (upgrades_array) => {
+        let upgradeST = "";
+        upgrades_array.forEach((upgrade) => {
+            upgradeST += `\`${upgrade.name}\`: ${upgrade.value}\n`
+        });
+        return upgradeST;
+    }
 
-            );
+    characterData.skillTalents.forEach((character) => {
+        character_embed.addField(`${character.type}: ${character.name}`, `${character.description}\n **Upgrades**:\n ${upgradesSkillTalents(character.upgrades)}\n\n`, false)
+    })
+    */
+
+    // Skill Talents
+    characterData.skillTalents.forEach((skillTalent) => {
+        character_embed.addField(`**${skillTalent.unlock}: ${skillTalent.name}**`, `${skillTalent.description}`, false);
+    })
+    
+    // Passive Talents
+    characterData.passiveTalents.forEach((passiveTalent) => {
+        character_embed.addField(`Passive: ${passiveTalent.name}`, `\`${passiveTalent.unlock}\`\n${passiveTalent.description}`, false);
+    })
+
+    // Constellations 
+    characterData.constellations.forEach((constellation) => {
+        character_embed.addField(`Constellation: ${constellation.name}`, `\`${constellation.unlock}\`\n${constellation.description}`, false);
+    })
     
     msgRef.edit(character_embed);
     
