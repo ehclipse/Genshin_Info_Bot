@@ -65,7 +65,7 @@ module.exports = {
             .addOptions(menuOptions);
 
         
-        var msg_ref = msg.channel.send(":D", selection)
+        var msg_ref = msg.channel.send("___", selection)
         console.log("menu");
 
         return msg_ref;
