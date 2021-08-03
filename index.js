@@ -103,6 +103,7 @@ const nation_embed = new Discord.MessageEmbed()
 
 client.once('ready', () => {
     console.log('Bot is online!');
+    client.user.setActivity('Inazuma', {type: "PLAYING"});
 
 });
 
