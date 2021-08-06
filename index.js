@@ -239,8 +239,7 @@ client.on("clickMenu",  async (menu) => {
 
 
 
-//client.login(process.env.DISC_TOKEN);
-client.login('MzI1NDAxMjI1MDExMDAzMzkz.WURbgQ.GYYLXxr9wcR8GaRQlsrRqaHUWF0');
+client.login(process.env.DISC_TOKEN);
 
 
 // Idea for bot
