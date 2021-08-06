@@ -96,26 +96,85 @@ const nation_embed = new Discord.MessageEmbed()
 .setFooter('Eula Bot','https://i.pinimg.com/236x/4e/f3/02/4ef3020c1dace7794f7dd96d04025b14.jpg')
 .setThumbnail('https://static.wikia.nocookie.net/gensin-impact/images/8/80/Emblem_Mondstadt.png/revision/latest?cb=20201116194623');
 
+const help_embed = new Discord.MessageEmbed()
+.setTitle('Help')
+.setDescription('**Prefix** \n\'.\'\n **Commands** \n\'genshin\'')
+.setColor('#ff00ff')
+.setFooter('Eula Bot','https://i.pinimg.com/236x/4e/f3/02/4ef3020c1dace7794f7dd96d04025b14.jpg')
+.setImage('https://media.giphy.com/media/1TGke2Ba9nbisAXQsJ/giphy.gif');
 
 //////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
+//const guildID = "872366301425831947"
+
+const getApp = (gID) => { // for slash commands
+    const app = client.api.applications(client.user.id)
+    if (gID){
+        app.guilds(gID)
+    }
+    return app
+}
+
+const createAPIMessage = async (interaction, content) => { // for sending embeds from slash command
+    const {data, files} = await Discord.APIMessage.create(
+        client.channels.resolve(interaction.channel_id),
+        content
+    )
+        .resolveData()
+        .resolveFiles()
+    return { ...data, files}
+}
+
+const slashReply = async (interaction, response) => {
+    let data = {
+        content: response,
+    }
+
+    // Check if reply is an embed
+    if(typeof response === 'object')
+    {
+        data = await createAPIMessage(interaction, response)
+    }
+    client.api.interactions(interaction.id, interaction.token).callback.post({
+        data: {
+            type: 4, // code for string = 4
+            data,
+        }
+    }) // replies to user
+}
 
 
-client.once('ready', () => {
+
+client.once('ready', async () => {
     console.log('Bot is online!');
     client.user.setActivity('Inazuma', {type: "PLAYING"});
+    const slashCommands = await getApp().commands.get(); // retrieves all of the slash commands
+    console.log(slashCommands);
 
+    // Ping slash command
+    await getApp().commands.post({
+        data: {
+            name: 'help',
+            description: 'Shows user how to use the bot!'
+        }
+    });
+
+  
+
+    client.ws.on('INTERACTION_CREATE', async (interaction) => { // handling slash commands
+        const slashCommand = interaction.data.name.toLowerCase()
+
+        switch(slashCommand){
+            case "help":
+                slashReply(interaction, help_embed)
+                break;
+        }
+    })
 });
 
 
 client.on('message', async msg => {
     const args = msg.content.slice(prefix.length).split(/ +/);
-
-    if(msg.author.id == client.user.id) // if sender is bot
-    {
-       
-
-    }
 
     switch(args[0]){
 
@@ -180,7 +239,8 @@ client.on("clickMenu",  async (menu) => {
 
 
 
-client.login(process.env.DISC_TOKEN);
+//client.login(process.env.DISC_TOKEN);
+client.login('MzI1NDAxMjI1MDExMDAzMzkz.WURbgQ.GYYLXxr9wcR8GaRQlsrRqaHUWF0');
 
 
 // Idea for bot
