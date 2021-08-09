@@ -2,6 +2,10 @@
 
 module.exports = [
     {
+        label: "<- main menu",
+        value: "backMain"
+    },
+    {
         label: "skyrider sword",
         value: "skyrider-sword"
     },
@@ -104,8 +108,5 @@ module.exports = [
         label: "wolf\'s gravestone",
         value: "wolf-s-gravestone"
     },
-    {
-        label: "<- main menu",
-        value: "backMain"
-    }
+    
 ]

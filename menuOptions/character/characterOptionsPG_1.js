@@ -2,6 +2,10 @@
 
 module.exports = [
     {
+        label: "<- character menu",
+        value: "backChar"
+    },
+    {
         label: "albedo",
         value: "albedo",
     },
@@ -93,17 +97,6 @@ module.exports = [
         label: "qiqi",
         value: "qiqi",
     },
-    /*
-    {
-        label: "razor",
-        value: "razor",
-    },*/
-    {
-        label: "rosaria",
-        value: "rosaria",
-    },
-    {
-        label: "<- main menu",
-        value: "backMain"
-    }
+    
+    
 ]

@@ -1,7 +1,9 @@
 const {MessageMenuOption, MessageMenu} = require("discord-buttons");
-const artifactMenuOptions = require('../menuOptions/artifactOptions');
+
+const artifactSubMenuOptions = require('../menuOptions/artifact/artifactSubMenuOptions');
+const charactertSubMenuOptions = require('../menuOptions/character/characterSubMenuOptions');
+
 const weaponMenuOptions = require('../menuOptions/weaponOptions');
-const characterMenuOptions = require('../menuOptions/characterOptions');
 const elementMenuOptions = require('../menuOptions/elementOptions');
 const nationMenuOptions = require('../menuOptions/nationOptions');
 
@@ -9,13 +11,13 @@ module.exports = (menu, botUserMap, artifact_embed, weapon_embed, character_embe
     
 
    
-
-    let artifactMenu = new MessageMenu()
+    // Artifact Sub Menu
+    let artifactSubMenu = new MessageMenu()
             .setID("artifactMenu")
             .setMaxValues(1)
             .setMinValues(1)
             .setPlaceholder("Click me to make a Selection!")
-            .addOptions(artifactMenuOptions);
+            .addOptions(artifactSubMenuOptions);
 
     let weaponMenu = new MessageMenu()
             .setID("weaponMenu")
@@ -24,12 +26,12 @@ module.exports = (menu, botUserMap, artifact_embed, weapon_embed, character_embe
             .setPlaceholder("Click me to make a Selection!")
             .addOptions(weaponMenuOptions);
     
-    let characterMenu = new MessageMenu()
-            .setID("characterMenu")
+    let characterSubMenu = new MessageMenu()
+            .setID("artifactMenu")
             .setMaxValues(1)
             .setMinValues(1)
             .setPlaceholder("Click me to make a Selection!")
-            .addOptions(characterMenuOptions);
+            .addOptions(charactertSubMenuOptions);
 
     let elementMenu = new MessageMenu()
             .setID("elementMenu")
@@ -47,13 +49,13 @@ module.exports = (menu, botUserMap, artifact_embed, weapon_embed, character_embe
 
     switch(menu.values[0]){
         case "artifacts":
-            botUserMap[menu.clicker.user.id].mainMenuRef.edit(artifact_embed, artifactMenu);
+            botUserMap[menu.clicker.user.id].mainMenuRef.edit(artifact_embed, artifactSubMenu);
             botUserMap[menu.clicker.user.id].position = 'artifact';
             menu.reply.defer();
             break;
         case "characters":
             console.log('characters');
-            botUserMap[menu.clicker.user.id].mainMenuRef.edit(character_embed, characterMenu);
+            botUserMap[menu.clicker.user.id].mainMenuRef.edit(character_embed, characterSubMenu);
             botUserMap[menu.clicker.user.id].position = 'character';
             menu.reply.defer();
             break;

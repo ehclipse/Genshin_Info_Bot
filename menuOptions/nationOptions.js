@@ -2,6 +2,10 @@
 
 module.exports = [
     {
+        label: "<- main menu",
+        value: "backMain"
+    },
+    {
         label: "inazuma",
         value: "inazuma"
     },
@@ -13,8 +17,5 @@ module.exports = [
         label: "mondstadt",
         value: "mondstadt"
     },
-    {
-        label: "<- main menu",
-        value: "backMain"
-    }
+    
 ]

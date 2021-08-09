@@ -2,6 +2,10 @@
 
 module.exports = [
     {
+        label: "<- main menu",
+        value: "backMain"
+    },
+    {
         label: "anemo",
         value: "anemo"
     },
@@ -29,10 +33,7 @@ module.exports = [
         label: "pyro",
         value: "pyro"
     },
-    {
-        label: "<- main menu",
-        value: "backMain"
-    }
+    
     
 
 

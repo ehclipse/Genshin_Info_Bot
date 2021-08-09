@@ -1,7 +1,11 @@
-// All artifact options.
+//  Artifact options page 1.
 
 
 module.exports = [
+    {
+        label: "<- artifact menu",
+        value: "backArt"
+    },
     {
         label: "adventurer",
         value: "adventurer",
@@ -55,11 +59,10 @@ module.exports = [
         value: "lavawalker",
     },
     
-    /*
     {
         label: "lucky dog",
         value: "lucky-dog",
-    },*/
+    },
     {
         label: "maiden beloved",
         value: "maiden-beloved",
@@ -100,23 +103,10 @@ module.exports = [
         label: "tiny miracle",
         value: "tiny-miracle",
     },
-    {
-        label: "traveling doctor",
-        value: "traveling-doctor",
-    },
-    {
-        label: "<- main menu",
-        value: "backMain"
-    },
-    /* Maximum options is 25, probably need to create a next option and go to the other menu.
-    {
-        label: "viridescent venerer",
-        value: "viridescent-venerer",
-    },
-    {
-        label: "wanderer\'s troupe",
-        value: "wanderer-s-troupe",
-    },
-    */
+
+  
+    /* Maximum options is 25, probably need to create a next option and go to the other menu. */
+    
+    
     
 ]

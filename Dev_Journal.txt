@@ -69,6 +69,9 @@ Added a simple slash command for displaying help embed.
 Update 16 (8/8/2021 10:40 pm)
 Added a back button back to the main menu for each submenu and added more info on help embed to show available submenus.
 
+Update 17 (8/9/2021 3:57 am)
+Reworked the main menu again. Added submenus and pages for artifacts and characters. Will need to do the same for weapons too. Need to find a way to stop embed at max characters for Zhongli.
+
 Things to do:
 - Push project to github before removing onMessageReactions. -- done
 
