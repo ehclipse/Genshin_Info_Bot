@@ -13,4 +13,8 @@ module.exports = [
         label: "mondstadt",
         value: "mondstadt"
     },
+    {
+        label: "back to main menu",
+        value: "backMain"
+    }
 ]

@@ -53,6 +53,9 @@ for(const file of commandFiles){ // for each command file, it will require it in
 }
 
 
+
+
+
 //////////////////////////////////////////////////////////////////////////////////////////////////////////
 
 // Embeds
@@ -98,7 +101,7 @@ const nation_embed = new Discord.MessageEmbed()
 
 const help_embed = new Discord.MessageEmbed()
 .setTitle('Help')
-.setDescription('**Prefix** \n\'.\'\n **Commands** \n\'genshin\'')
+.setDescription('**Prefix** \n\'.\'\n **Commands** \n\'genshin\'\n **Menu Options Currently Available**\nartifact\ncharacter\nelement\nnation\nweapon ')
 .setColor('#ff00ff')
 .setFooter('Eula Bot','https://i.pinimg.com/236x/4e/f3/02/4ef3020c1dace7794f7dd96d04025b14.jpg')
 .setImage('https://media.giphy.com/media/1TGke2Ba9nbisAXQsJ/giphy.gif');
@@ -162,7 +165,7 @@ client.once('ready', async () => {
   
 
     client.ws.on('INTERACTION_CREATE', async (interaction) => { // handling slash commands
-        const slashCommand = interaction.data.name.toLowerCase()
+        const slashCommand = interaction.data.name//.toLowerCase()
 
         switch(slashCommand){
             case "help":
@@ -197,9 +200,11 @@ client.on('message', async msg => {
     }
 });
 
+/*
+client.on('clickButton', async (button) => {
 
-
-
+});
+*/
 
 
 client.on("clickMenu",  async (menu) => {
@@ -210,19 +215,19 @@ client.on("clickMenu",  async (menu) => {
                 mainMenuSelect(menu, botUserMap, artifact_embed, weapon_embed, character_embed, element_embed, nation_embed);
                 break;
             case 'artifact':
-                artifactMenuSelect(menu, botUserMap[menu.clicker.user.id].mainMenuRef);
+                artifactMenuSelect(menu, botUserMap[menu.clicker.user.id].mainMenuRef, botUserMap[menu.clicker.user.id]);
                 break;
             case 'weapon':
-                weaponMenuSelect(menu, botUserMap[menu.clicker.user.id].mainMenuRef);
+                weaponMenuSelect(menu, botUserMap[menu.clicker.user.id].mainMenuRef, botUserMap[menu.clicker.user.id]);
                 break;
             case 'character':
-                characterMenuSelect(menu, botUserMap[menu.clicker.user.id].mainMenuRef);
+                characterMenuSelect(menu, botUserMap[menu.clicker.user.id].mainMenuRef, botUserMap[menu.clicker.user.id]);
                 break;
             case 'element':
-                elementMenuSelect(menu, botUserMap[menu.clicker.user.id].mainMenuRef);
+                elementMenuSelect(menu, botUserMap[menu.clicker.user.id].mainMenuRef, botUserMap[menu.clicker.user.id]);
                 break;
             case 'nation':
-                nationMenuSelect(menu, botUserMap[menu.clicker.user.id].mainMenuRef);
+                nationMenuSelect(menu, botUserMap[menu.clicker.user.id].mainMenuRef, botUserMap[menu.clicker.user.id]);
                 break;
 
              

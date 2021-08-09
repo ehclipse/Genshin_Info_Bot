@@ -96,12 +96,16 @@ module.exports = [
         label: "windblume ode",
         value: "windblume-ode"
     },
-    {
+   /* {
         label: "wine and song",
         value: "wine-and-song"
-    },
+    },*/
     {
         label: "wolf\'s gravestone",
         value: "wolf-s-gravestone"
+    },
+    {
+        label: "back to main menu",
+        value: "backMain"
     }
 ]

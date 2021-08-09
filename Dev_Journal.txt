@@ -63,8 +63,14 @@ Update 14 (8/2/2021 3:52 am)
 Finished the character pretty much. Just that the skill talent upgrades haven't been put into all the characters in the api yet, so I will ignore it since it seems less useful because the player 
 can look through the stats in-game rather than on the bot. The bot should just give an overview on the skills and talents. Next probably should be one of the other options on the main menu.
 
+Update 15 (8/6/2021 12:50 am)
+Added a simple slash command for displaying help embed.
+
+Update 16 (8/8/2021 10:40 pm)
+Added a back button back to the main menu for each submenu and added more info on help embed to show available submenus.
+
 Things to do:
-- Push project to github before removing onMessageReactions.
+- Push project to github before removing onMessageReactions. -- done
 
 
 Menu Progress:

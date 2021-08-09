@@ -54,10 +54,12 @@ module.exports = [
         label: "lavawalker",
         value: "lavawalker",
     },
+    
+    /*
     {
         label: "lucky dog",
         value: "lucky-dog",
-    },
+    },*/
     {
         label: "maiden beloved",
         value: "maiden-beloved",
@@ -101,6 +103,10 @@ module.exports = [
     {
         label: "traveling doctor",
         value: "traveling-doctor",
+    },
+    {
+        label: "back to main menu",
+        value: "backMain"
     },
     /* Maximum options is 25, probably need to create a next option and go to the other menu.
     {

@@ -1,5 +1,5 @@
 
-const {MessageMenuOption, MessageMenu} = require("discord-buttons");
+const {MessageMenuOption, MessageMenu, MessageButton} = require("discord-buttons");
 const { Message, DiscordAPIError, MessageEmbed } = require("discord.js");
 
 module.exports = {
@@ -56,6 +56,12 @@ module.exports = {
             },
         ]
 
+        /*
+         // Button
+        const mainMenuButton = new MessageButton()
+            .setStyle('grey')
+            .setID('mainMenuButton')
+            .setLabel('Back to Main Menu');*/
 
         let selection = new MessageMenu()
             .setID("select")
@@ -65,7 +71,8 @@ module.exports = {
             .addOptions(menuOptions);
 
         
-        var msg_ref = msg.channel.send("___", selection)
+        var msg_ref = msg.channel.send("__", selection) 
+
         console.log("menu");
 
         return msg_ref;

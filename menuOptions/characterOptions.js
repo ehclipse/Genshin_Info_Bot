@@ -93,12 +93,17 @@ module.exports = [
         label: "qiqi",
         value: "qiqi",
     },
+    /*
     {
         label: "razor",
         value: "razor",
-    },
+    },*/
     {
         label: "rosaria",
         value: "rosaria",
     },
+    {
+        label: "back to main menu",
+        value: "backMain"
+    }
 ]

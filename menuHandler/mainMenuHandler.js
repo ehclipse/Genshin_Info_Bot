@@ -7,6 +7,9 @@ const nationMenuOptions = require('../menuOptions/nationOptions');
 
 module.exports = (menu, botUserMap, artifact_embed, weapon_embed, character_embed, element_embed, nation_embed) => {
     
+
+   
+
     let artifactMenu = new MessageMenu()
             .setID("artifactMenu")
             .setMaxValues(1)

@@ -29,6 +29,10 @@ module.exports = [
         label: "pyro",
         value: "pyro"
     },
+    {
+        label: "back to main menu",
+        value: "backMain"
+    }
     
 
 
