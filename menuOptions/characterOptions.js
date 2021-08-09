@@ -103,7 +103,7 @@ module.exports = [
         value: "rosaria",
     },
     {
-        label: "back to main menu",
+        label: "<- main menu",
         value: "backMain"
     }
 ]

@@ -30,7 +30,7 @@ module.exports = [
         value: "pyro"
     },
     {
-        label: "back to main menu",
+        label: "<- main menu",
         value: "backMain"
     }
     

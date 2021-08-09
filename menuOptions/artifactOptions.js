@@ -105,7 +105,7 @@ module.exports = [
         value: "traveling-doctor",
     },
     {
-        label: "back to main menu",
+        label: "<- main menu",
         value: "backMain"
     },
     /* Maximum options is 25, probably need to create a next option and go to the other menu.

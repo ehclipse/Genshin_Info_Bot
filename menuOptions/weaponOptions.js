@@ -105,7 +105,7 @@ module.exports = [
         value: "wolf-s-gravestone"
     },
     {
-        label: "back to main menu",
+        label: "<- main menu",
         value: "backMain"
     }
 ]
