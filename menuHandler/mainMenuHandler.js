@@ -2,8 +2,9 @@ const {MessageMenuOption, MessageMenu} = require("discord-buttons");
 
 const artifactSubMenuOptions = require('../menuOptions/artifact/artifactSubMenuOptions');
 const charactertSubMenuOptions = require('../menuOptions/character/characterSubMenuOptions');
+const weaponSubMenuOptions = require('../menuOptions/weapon/weaponSubMenuOptions');
 
-const weaponMenuOptions = require('../menuOptions/weaponOptions');
+
 const elementMenuOptions = require('../menuOptions/elementOptions');
 const nationMenuOptions = require('../menuOptions/nationOptions');
 
@@ -19,12 +20,12 @@ module.exports = (menu, botUserMap, artifact_embed, weapon_embed, character_embe
             .setPlaceholder("Click me to make a Selection!")
             .addOptions(artifactSubMenuOptions);
 
-    let weaponMenu = new MessageMenu()
+    let weaponSubMenu = new MessageMenu()
             .setID("weaponMenu")
             .setMaxValues(1)
             .setMinValues(1)
             .setPlaceholder("Click me to make a Selection!")
-            .addOptions(weaponMenuOptions);
+            .addOptions(weaponSubMenuOptions);
     
     let characterSubMenu = new MessageMenu()
             .setID("artifactMenu")
@@ -88,7 +89,7 @@ module.exports = (menu, botUserMap, artifact_embed, weapon_embed, character_embe
             menu.reply.defer();
             break;
         case "weapons":
-            botUserMap[menu.clicker.user.id].mainMenuRef.edit(weapon_embed, weaponMenu);
+            botUserMap[menu.clicker.user.id].mainMenuRef.edit(weapon_embed, weaponSubMenu);
             botUserMap[menu.clicker.user.id].position = 'weapon';
             console.log('weapons');
             menu.reply.defer();

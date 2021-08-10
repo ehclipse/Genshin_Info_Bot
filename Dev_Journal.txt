@@ -72,6 +72,9 @@ Added a back button back to the main menu for each submenu and added more info o
 Update 17 (8/9/2021 3:57 am)
 Reworked the main menu again. Added submenus and pages for artifacts and characters. Will need to do the same for weapons too. Need to find a way to stop embed at max characters for Zhongli.
 
+Update 18 (8/9/2021 8:10 pm)
+Added submenu and pages to weapons. Added stars for rarity. Changed the discord status of the bot
+
 Things to do:
 - Push project to github before removing onMessageReactions. -- done
 

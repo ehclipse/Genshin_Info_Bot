@@ -150,7 +150,7 @@ const slashReply = async (interaction, response) => {
 
 client.once('ready', async () => {
     console.log('Bot is online!');
-    client.user.setActivity('Inazuma', {type: "PLAYING"});
+    client.user.setPresence({activity: {name: 'Searching for Visions '},status: 'idle'});
     const slashCommands = await getApp().commands.get(); // retrieves all of the slash commands
     console.log(slashCommands);
 
@@ -245,6 +245,7 @@ client.on("clickMenu",  async (menu) => {
 
 
 client.login(process.env.DISC_TOKEN);
+
 
 
 // Idea for bot

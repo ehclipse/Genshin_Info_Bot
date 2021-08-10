@@ -75,7 +75,7 @@ module.exports = async (menu, msgRef, botUser) => {
     
      // character Sub Menu
      let characterSubMenu = new MessageMenu()
-        .setID("artifactMenu")
+        .setID("charMenu")
         .setMaxValues(1)
         .setMinValues(1)
         .setPlaceholder("Click me to make a Selection!")
@@ -83,14 +83,14 @@ module.exports = async (menu, msgRef, botUser) => {
 
     // Character PG Menus
     let characterMenuPG_1 = new MessageMenu()
-        .setID("artifactMenu")
+        .setID("charMenu")
         .setMaxValues(1)
         .setMinValues(1)
         .setPlaceholder("Click me to make a Selection!")
         .addOptions(characterMenuOptionsPG_1);
 
     let characterMenuPG_2 = new MessageMenu()
-        .setID("artifactMenu")
+        .setID("charMenu")
         .setMaxValues(1)
         .setMinValues(1)
         .setPlaceholder("Click me to make a Selection!")
@@ -114,6 +114,12 @@ module.exports = async (menu, msgRef, botUser) => {
             .then((data) => {
                 return data.json();
             });
+
+            let rarityStars = ""
+
+            for(let x = 0; x < characterData.rarity; x++)
+                rarityStars += "⭐ ";
+
             const character_embed = new Discord.MessageEmbed()
                 .setColor('#ff00ff')
                 .setFooter('Eula Bot','https://i.pinimg.com/236x/4e/f3/02/4ef3020c1dace7794f7dd96d04025b14.jpg')
@@ -125,7 +131,7 @@ module.exports = async (menu, msgRef, botUser) => {
                     {name: "Vision", value: `${characterData.vision}`, inline: true}, 
                     {name: "Weapon", value: `${characterData['weapon']}`, inline: true}, 
                     {name: "Nation", value: `${characterData['nation']}`, inline: true},
-                    {name: "Rarity", value: `${characterData['rarity']}`, inline: true},
+                    {name: "Rarity", value: rarityStars, inline: true},
                     {name: "Constellation", value: `${characterData['constellation']}`, inline: true},
                     {name: "Birthday", value: `${characterData['birthday']}`, inline: true},
 
