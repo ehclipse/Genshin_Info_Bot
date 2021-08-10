@@ -237,10 +237,11 @@ client.on("clickMenu",  async (menu) => {
     }
  
     else{
-        menu.reply.send("Error: The menu that you have just selected was called my another user. Please use '.genshin' command to create another menu.")
+        menu.reply.send("Error: The menu that you have just selected was called my another user. Please use '.genshin' command to create another menu.", true)
     }
 
 });
+
 
 
 
