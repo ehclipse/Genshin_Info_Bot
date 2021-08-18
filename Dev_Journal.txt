@@ -75,6 +75,9 @@ Reworked the main menu again. Added submenus and pages for artifacts and charact
 Update 18 (8/9/2021 8:10 pm)
 Added submenu and pages to weapons. Added stars for rarity. Changed the discord status of the bot
 
+Update 19 (8/18/2021 2:58 am)
+Adjusted Zhongli's skill description going over the limit of the embed field size.
+
 Things to do:
 - Push project to github before removing onMessageReactions. -- done
 
