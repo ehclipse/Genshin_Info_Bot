@@ -249,6 +249,7 @@ client.login(process.env.DISC_TOKEN);
 
 
 
+
 // Idea for bot
 // Use emote reacts to navigate through embedded thing
 // Have embedded list the categories: artifacts, characters, enemies, etc.

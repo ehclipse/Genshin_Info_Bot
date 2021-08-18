@@ -154,7 +154,15 @@ module.exports = async (menu, msgRef, botUser) => {
 
             // Skill Talents
             characterData.skillTalents.forEach((skillTalent) => {
-                character_embed.addField(`**${skillTalent.unlock}: ${skillTalent.name}**`, `${skillTalent.description}`, false);
+                if(skillTalent.description.length > 1023) // if the skill's description exceeds the max length of the text field, then create another field with the rest of the text
+                {
+                    character_embed.addField(`**${skillTalent.unlock}: ${skillTalent.name}**`, `${skillTalent.description.substring(0,1020)}-`, false);
+                    character_embed.addField(`-`, `${skillTalent.description.substring(1020)}`, false);
+                }
+                else
+                {
+                    character_embed.addField(`**${skillTalent.unlock}: ${skillTalent.name}**`, `${skillTalent.description}`, false);
+                }
             })
             
             // Passive Talents
