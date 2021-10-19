@@ -10,6 +10,10 @@ module.exports = [
         value: "razor",
     },
     {
+        label: "raiden",
+        value: "raiden",
+    },
+    {
         label: "rosaria",
         value: "rosaria",
     },

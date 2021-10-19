@@ -124,7 +124,7 @@ module.exports = async (menu, msgRef, botUser) => {
                 .setColor('#ff00ff')
                 .setFooter('Eula Bot','https://i.pinimg.com/236x/4e/f3/02/4ef3020c1dace7794f7dd96d04025b14.jpg')
                 .setThumbnail(`${apiBaseURL}/characters/${menu.values[0]}/icon`) //https://i.pinimg.com/236x/4e/f3/02/4ef3020c1dace7794f7dd96d04025b14.jpg
-                .setImage(`${apiBaseURL}/characters/${menu.values[0]}/portrait`) //https://i.pinimg.com/236x/4e/f3/02/4ef3020c1dace7794f7dd96d04025b14.jpg
+                .setImage(`${apiBaseURL}/characters/${menu.values[0]}/gacha-splash`) //https://i.pinimg.com/236x/4e/f3/02/4ef3020c1dace7794f7dd96d04025b14.jpg
                 .setTitle(`${characterData.name}`)
                 .setDescription(`${characterData['description']}`)
                 .addFields(
