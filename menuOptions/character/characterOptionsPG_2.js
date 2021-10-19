@@ -6,12 +6,12 @@ module.exports = [
         value: "backChar"
     },
     {
-        label: "razor",
-        value: "razor",
-    },
-    {
         label: "raiden",
         value: "raiden",
+    },
+    {
+        label: "razor",
+        value: "razor",
     },
     {
         label: "rosaria",
