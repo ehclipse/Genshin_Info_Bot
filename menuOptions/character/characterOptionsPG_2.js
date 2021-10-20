@@ -6,6 +6,26 @@ module.exports = [
         value: "backChar"
     },
     {
+        label: "lisa",
+        value: "lisa",
+    },
+    {
+        label: "mona",
+        value: "mona",
+    },
+    {
+        label: "ningguang",
+        value: "ningguang",
+    },
+    {
+        label: "noelle",
+        value: "noelle",
+    },
+    {
+        label: "qiqi",
+        value: "qiqi",
+    },
+    {
         label: "raiden",
         value: "raiden",
     },
@@ -16,6 +36,14 @@ module.exports = [
     {
         label: "rosaria",
         value: "rosaria",
+    },
+    {
+        label: "sara",
+        value: "sara",
+    },
+    {
+        label: "sayu",
+        value: "sayu",
     },
     {
         label: "sucrose",
@@ -52,6 +80,10 @@ module.exports = [
     {
         label: "xinyan",
         value: "xinyan",
+    },
+    {
+        label: "yoimiya",
+        value: "yoimiya",
     },
     {
         label: "yanfei",

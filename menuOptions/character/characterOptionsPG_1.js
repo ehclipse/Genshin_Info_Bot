@@ -10,6 +10,10 @@ module.exports = [
         value: "albedo",
     },
     {
+        label: "aloy",
+        value: "aloy",
+    },
+    {
         label: "amber",
         value: "amber",
     },
@@ -78,25 +82,10 @@ module.exports = [
         value: "klee",
     },
     {
-        label: "lisa",
-        value: "lisa",
+        label: "kokomi",
+        value: "kokomi",
     },
-    {
-        label: "mona",
-        value: "mona",
-    },
-    {
-        label: "ningguang",
-        value: "ningguang",
-    },
-    {
-        label: "noelle",
-        value: "noelle",
-    },
-    {
-        label: "qiqi",
-        value: "qiqi",
-    },
+    
     
     
 ]
